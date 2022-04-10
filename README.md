@@ -7,6 +7,7 @@ We have done Interest rate prediction using,
 2. Decision Trees.
 
 Orignal Dataset has 10000 rows and 55 features.
+# Data Preprocessing
 But before proceeding to prediction, since data had issues, we needed to clean the data. Issues are,
 1. Missing Data : 
 
@@ -32,7 +33,7 @@ months_since_last_credit_inquiry 1122
 num_accounts_120d_past_due 295
 
 We also observered similarity (line with slope approx. 1) between debt to income and debt to income joint and hence decided to replace missing value.
-# future scope: predict debt to income rather than directly replacing same value.
+#future scope: predict debt to income rather than directly replacing same value.
 
 months_since_last_credit_inquiry, num_accounts_120d_past_due values are numerical values hence replaced by mean values as prelimnary step.
 #future scope : find if any other values are correlated with them which could help predict missing values.
@@ -78,14 +79,14 @@ Converted the date format
   We did scaling for selected features. We used Min max scaler
 
 
-Observations:
+# Visualization and Observations:
 From our visualizations, we observed few things
 OBSERVATIONS
 open credit lines and number of satisfactory accounts are same and one of them can be removed from features
 for lower annual incomes, credit limits and credit utilized interest rates are high
 Dataset is imbalanced for state. Very high data is for states like NJ, NY, TX, FL and very loweer for SD, DC, NE and others. For predictions of lower count of states may be affected.
 
-Prediction Model:
+# Prediction Model:
 We used linear regression and we obtained:
 Mean Absolute Error: 1.1150561874542772e-13
 Mean Squared Error: 1.2460585339007213e-26
